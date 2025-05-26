@@ -81,7 +81,7 @@ plt.show()
 ```
 Output:
 
-![attachments/attachments/Figure_2](attachments/attachments/Figure_2.png)
+![attachments/Figure_2](attachments/Figure_2.png)
 
 # Power Spectral Density (PSD)
 
