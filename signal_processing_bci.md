@@ -3,12 +3,6 @@
 
 # Aim
 
-- ## Search about the following topics:
-	- time-frequency domains
-	- power spectral density
-	- band-pass filtering
-	- noise removal
-	- artifact removal
 - ## Perform the following operations in code:
 	- Create a sine wave
 	- Plot the wave
