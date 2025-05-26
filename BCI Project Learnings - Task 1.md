@@ -50,7 +50,7 @@ plt.show()
 ```
 
 Output:
-!(Figure 1)[Figure_1.png]
+!(Figure 1)[/Figure_1.png]
 
 ---
 # Creating multiple waves
