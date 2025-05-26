@@ -51,7 +51,7 @@ plt.show()
 
 Output:
 
-![Figure 1](Figure_1.png)
+![Figure 1](attachments/attachments/Figure_1.png)
 
 ---
 # Creating multiple waves
@@ -84,7 +84,7 @@ plt.show()
 ```
 Output:
 
-![Figure_2](Figure_2.png)
+![attachments/attachments/Figure_2](attachments/attachments/Figure_2.png)
 
 # Power Spectral Density (PSD)
 
@@ -125,7 +125,7 @@ plt.grid(True)
 plt.show()
 ```
 
-![Figure_3](Figure_3.png)
+![attachments/attachments/Figure_3](attachments/Figure_3.png)
 
 As expected, we see a spike near 0, at 5 Hz.
 
@@ -133,7 +133,7 @@ As expected, we see a spike near 0, at 5 Hz.
 ## PSD of multiple waves using Welch's method
 
 Here is the graph of the resultant signal:
-![Figure_7](Figure_7.png)
+![attachments/Figure_7](attachments/Figure_7.png)
 
 Now, we'll find the PSD of this wave using Welch's method:
 
@@ -161,7 +161,7 @@ plt.ylabel("Power")
 plt.show()
 ```
 
-![Figure_4](Figure_4.png)
+![attachments/Figure_4](attachments/Figure_4.png)
 
 `resultant` waveform is a signal which comprises of 3 signals as stated previously.
 
@@ -204,7 +204,7 @@ plt.ylabel("Power")
 plt.show()
 ```
 
-![Figure_5](Figure_5.png)
+![attachments/Figure_5](attachments/Figure_5.png)
 
 This looks a lot better.
 We can clearly say which frequencies the result wave is comprising of.
@@ -239,7 +239,7 @@ plt.xlabel("Frequency (Hz))")
 plt.ylabel("Power")
 plt.show()
 ```
-![Figure_6](Figure_6.png)
+![attachments/Figure_6](attachments/Figure_6.png)
 
 Great.
 
@@ -285,7 +285,7 @@ plt.xlabel("Time (s)")
 plt.ylabel("Amplitude")
 plt.show()
 ```
-![Figure_8](Figure_8.png)
+![attachments/Figure_8](attachments/Figure_8.png)
 
 This looks very close to the original pure signal. 
 
@@ -293,7 +293,7 @@ So, we'll try increasing the standard deviation of the noise.
 
 Increasing the standard deviation to 1 instead, we get:
 
-![Figure_9](Figure_9.png)
+![attachments/Figure_9](attachments/Figure_9.png)
 
 This is a lot better.
 
@@ -329,7 +329,7 @@ plt.ylabel("Power")
 plt.show()
 ```
 
-![Figure_10](Figure_10.png)
+![attachments/Figure_10](attachments/Figure_10.png)
 
 I have also plotted the noiseless pure signal's PSD along with the noisy signal's PSD.
 
@@ -372,24 +372,24 @@ plt.xlabel("Frequency (Hz)")
 plt.ylabel("Power")
 plt.show()
 ```
-![Figure_11](Figure_11.png)
+![attachments/Figure_11](attachments/Figure_11.png)
 
 Pretty accurate.
 
 ## Analysis of Noisy Resultant Wave
-![Figure_7](Figure_7.png)
+![attachments/Figure_7](attachments/Figure_7.png)
 
 Let us use this resultant wave (comprising of three signals- at 5, 10 and 20 Hz each)
 
 Applying random Gaussian noise of standard deviation 1, we get:
 
-![Figure_12](Figure_12.png)
+![attachments/Figure_12](attachments/Figure_12.png)
 
 This is not enough...
 
 Let's try increasing the randomness by adding random noise to each of the signal before adding them.
 
-![Figure_13](Figure_13.png)
+![attachments/Figure_13](attachments/Figure_13.png)
 
 Better.
 
@@ -434,7 +434,7 @@ plt.ylabel("Power")
 plt.show()
 ```
 
-![Figure_14](Figure_14.png)
+![attachments/Figure_14](attachments/Figure_14.png)
 
 ---
 ## PSD of Noisy Resultant Wave using Raw FFT
@@ -482,7 +482,7 @@ plt.ylabel("Power")
 plt.show()
 ```
 
-![Figure_15](Figure_15.png)
+![attachments/Figure_15](attachments/Figure_15.png)
 
 ---
 # Conclusion:
