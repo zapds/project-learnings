@@ -81,7 +81,7 @@ plt.xlabel("Time (s)")
 plt.ylabel("Amplitude")
 plt.show()
 ```
-Output:![[Figure_2.png]]
+Output:![Figure_2](Figure_2.png)
 
 # Power Spectral Density (PSD)
 
@@ -122,7 +122,7 @@ plt.grid(True)
 plt.show()
 ```
 
-![[Figure_3.png]]
+![Figure_3](Figure_3.png)
 
 As expected, we see a spike near 0, at 5 Hz.
 
@@ -130,7 +130,7 @@ As expected, we see a spike near 0, at 5 Hz.
 ## PSD of multiple waves using Welch's method
 
 Here is the graph of the resultant signal:
-![[Figure_7.png]]
+![Figure_7](Figure_7.png)
 
 Now, we'll find the PSD of this wave using Welch's method:
 
@@ -158,7 +158,7 @@ plt.ylabel("Power")
 plt.show()
 ```
 
-![[Figure_4.png]]
+![Figure_4](Figure_4.png)
 
 `resultant` waveform is a signal which comprises of 3 signals as stated previously.
 
@@ -201,7 +201,7 @@ plt.ylabel("Power")
 plt.show()
 ```
 
-![[Figure_5.png]]
+![Figure_5](Figure_5.png)
 
 This looks a lot better.
 We can clearly say which frequencies the result wave is comprising of.
@@ -236,7 +236,7 @@ plt.xlabel("Frequency (Hz))")
 plt.ylabel("Power")
 plt.show()
 ```
-![[Figure_6.png]]
+![Figure_6](Figure_6.png)
 
 Great.
 
@@ -282,7 +282,7 @@ plt.xlabel("Time (s)")
 plt.ylabel("Amplitude")
 plt.show()
 ```
-![[Figure_8.png]]
+![Figure_8](Figure_8.png)
 
 This looks very close to the original pure signal. 
 
@@ -290,7 +290,7 @@ So, we'll try increasing the standard deviation of the noise.
 
 Increasing the standard deviation to 1 instead, we get:
 
-![[Figure_9.png]]
+![Figure_9](Figure_9.png)
 
 This is a lot better.
 
@@ -326,7 +326,7 @@ plt.ylabel("Power")
 plt.show()
 ```
 
-![[Figure_10.png]]
+![Figure_10](Figure_10.png)
 
 I have also plotted the noiseless pure signal's PSD along with the noisy signal's PSD.
 
@@ -369,7 +369,7 @@ plt.xlabel("Frequency (Hz)")
 plt.ylabel("Power")
 plt.show()
 ```
-![[Figure_11.png]]
+![Figure_11](Figure_11.png)
 
 Pretty accurate.
 
