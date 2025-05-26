@@ -50,6 +50,7 @@ plt.show()
 ```
 
 Output:
+
 ![Figure 1](Figure_1.png)
 
 ---
@@ -81,7 +82,9 @@ plt.xlabel("Time (s)")
 plt.ylabel("Amplitude")
 plt.show()
 ```
-Output:![Figure_2](Figure_2.png)
+Output:
+
+![Figure_2](Figure_2.png)
 
 # Power Spectral Density (PSD)
 
@@ -372,4 +375,124 @@ plt.show()
 ![Figure_11](Figure_11.png)
 
 Pretty accurate.
+
+## Analysis of Noisy Resultant Wave
+![Figure_7](Figure_7.png)
+
+Let us use this resultant wave (comprising of three signals- at 5, 10 and 20 Hz each)
+
+Applying random Gaussian noise of standard deviation 1, we get:
+
+![Figure_12](Figure_12.png)
+
+This is not enough...
+
+Let's try increasing the randomness by adding random noise to each of the signal before adding them.
+
+![Figure_13](Figure_13.png)
+
+Better.
+
+Let's try getting the PSD: first using Welch's method and then using raw FFT
+
+## PSD of Noisy Resultant Wave using Welch Method
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import welch
+
+t = np.linspace(0, 1, 1000, endpoint=False)
+
+signal = 1 * np.sin(2 * np.pi * 5 * t)
+signal2 = 2 * np.sin(2 * np.pi * 10 * t)
+signal3 = 0.5 * np.sin(2 * np.pi * 20 * t)
+resultant = signal + signal2 + signal3
+  
+noise = np.random.normal(0, 1, 1000)
+noise2 = np.random.normal(0, 1, 1000)
+noise3 = np.random.normal(0, 1, 1000)
+noisy_signal = signal + noise
+noisy_signal2 = signal2 + noise2
+noisy_signal3 = signal3 + noise3
+
+resultant_noisy = noisy_signal + noisy_signal2 + noisy_signal3
+
+
+freqs, psd = welch(resultant_noisy, 1000, nperseg=1000)
+freqs_pure, psd_pure = welch(resultant, 1000, nperseg=1000)
+
+mask = freqs < 40
+
+plt.plot(freqs[mask], psd[mask], label="Noisy Signal PSD")
+plt.plot(freqs_pure[mask], psd_pure[mask], label="Pure Signal PSD")
+plt.legend()
+plt.grid(True)
+plt.title("PSD of Noisy and Pure resultant signals- Welch Method")
+plt.xlabel("Frequency (Hz)")
+plt.ylabel("Power")
+plt.show()
+```
+
+![Figure_14](Figure_14.png)
+
+---
+## PSD of Noisy Resultant Wave using Raw FFT
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import welch
+
+t = np.linspace(0, 1, 1000, endpoint=False)
+
+signal = 1 * np.sin(2 * np.pi * 5 * t)
+signal2 = 2 * np.sin(2 * np.pi * 10 * t)
+signal3 = 0.5 * np.sin(2 * np.pi * 20 * t)
+resultant = signal + signal2 + signal3
+
+noise = np.random.normal(0, 1, 1000)
+noise2 = np.random.normal(0, 1, 1000)
+noise3 = np.random.normal(0, 1, 1000)
+noisy_signal = signal + noise
+noisy_signal2 = signal2 + noise2
+noisy_signal3 = signal3 + noise3
+  
+resultant_noisy = noisy_signal + noisy_signal2 + noisy_signal3
+
+# freqs, psd = welch(resultant_noisy, 1000, nperseg=1000)
+fft_result = np.fft.fft(resultant_noisy)
+psd = np.abs(fft_result) ** 2 / len(resultant_noisy)
+freqs = np.fft.fftfreq(len(resultant_noisy), 1/1000)  
+  
+# freqs_pure, psd_pure = welch(resultant, 1000, nperseg=1000)
+fft_result = np.fft.fft(resultant)
+psd_pure = np.abs(fft_result) ** 2 / len(resultant)
+freqs_pure = np.fft.fftfreq(len(resultant), 1/1000)
+
+mask = (freqs > 0) & (freqs < 40)
+
+plt.plot(freqs[mask], psd[mask], label="Noisy Signal PSD")
+plt.plot(freqs_pure[mask], psd_pure[mask], label="Pure Signal PSD")
+plt.legend()
+plt.grid(True)
+plt.title("PSD of Noisy and Pure resultant signals- Raw FFT Method")
+plt.xlabel("Frequency (Hz)")
+plt.ylabel("Power")
+plt.show()
+```
+
+![Figure_15](Figure_15.png)
+
+---
+# Conclusion:
+
+Studied the following:
+- Creating and adding pure signals using `numpy`
+- Generating random Gaussian noise
+- Two methods for obtaining the Power Spectral Density (PSD) of signals:
+	- Using Fast Fourier Transform directly (raw FFT)
+	- Welch's Method
+- Effect of noise on PSD
+
 
