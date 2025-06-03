@@ -73,23 +73,24 @@ for group, name in zip(groups, group_names):
 ```
 
 ## Frontal Polar
-![[frontal_polar_lobe.png]]
+
+![frontal_polar_lobe.png](attachments/frontal_polar_lobe.png)
 
 
 ## Frontal
-![[frontal_lobe.png]]
+![frontal_lobe.png](attachments/frontal_lobe.png)
 
 ## Central
-![[central_lobe.png]]
+![central_lobe.png](attachments/central_lobe.png)
 
 ## Temporal
-![[temporal_lobe.png]]
+![temporal_lobe.png](attachments/temporal_lobe.png)
 
 ## Parietal 
-![[parietal_lobe.png]]
+![parietal_lobe.png](attachments/parietal_lobe.png)
 
 ## Occipital
-![[occipital_lobe.png]]
+![occipital_lobe.png](attachments/occipital_lobe.png)
 
 # 2. PSD Analysis
 
@@ -145,22 +146,22 @@ for group, name in zip(groups, group_names):
 ```
 
 ## Frontal Polar
-![[psd_frontal_polar_lobe.png]]
+![psd_frontal_polar_lobe.png](attachments/psd_frontal_polar_lobe.png)
 
 ## Frontal
-![[psd_frontal_lobe.png]]
+![psd_frontal_lobe.png](attachments/psd_frontal_lobe.png)
 
 ## Central
-![[psd_central_lobe.png]]
+![psd_central_lobe.png](attachments/psd_central_lobe.png)
 
 ## Temporal
-![[psd_temporal_lobe.png]]
+![psd_temporal_lobe.png](attachments/psd_temporal_lobe.png)
 
 ## Parietal
-![[psd_parietal_lobe.png]]
+![psd_parietal_lobe.png](attachments/psd_parietal_lobe.png)
 
 ## Occipital
-![[psd_occipital_lobe.png]]
+![psd_occipital_lobe.png](attachments/psd_occipital_lobe.png)
 
 # Mean Voltage per Channel
 
@@ -191,28 +192,28 @@ plt.xticks(rotation=45)
 plt.show()
 ```
 
-![[mean_voltages.png]]
+![mean_voltages.png](attachments/mean_voltages.png)
 
 # Downsampling to 128 Hz
 
 ## Frontal Polar
-![[downsampled_frontal_polar_lobe.png]]
+![downsampled_frontal_polar_lobe.png](attachments/downsampled_frontal_polar_lobe.png)
 
 
 ## Frontal
-![[downsampled_frontal_lobe.png]]
+![downsampled_frontal_lobe.png](attachments/downsampled_frontal_lobe.png)
 
 ## Central
-![[downsampled_central_lobe.png]]
+![downsampled_central_lobe.png](attachments/downsampled_central_lobe.png)
 
 ## Temporal
-![[downsampled_temporal_lobe.png]]
+![downsampled_temporal_lobe.png](attachments/downsampled_temporal_lobe.png)
 
 ## Parietal 
-![[downsampled_parietal_lobe.png]]
+![downsampled_parietal_lobe.png](attachments/downsampled_parietal_lobe.png)
 
 ## Occipital
-![[downsampled_occipital_lobe.png]]
+![downsampled_occipital_lobe.png](attachments/downsampled_occipital_lobe.png)
 
 # PSD of Downsampled:
 
@@ -281,32 +282,32 @@ for group, name in zip(groups, group_names):
 
 ## Frontal Polar
 
-![[psd_downsampled_frontal_polar_lobe.png]]
+![psd_downsampled_frontal_polar_lobe.png](attachments/psd_downsampled_frontal_polar_lobe.png)
 
   
 
 ## Frontal
 
-![[psd_downsampled_frontal_lobe.png]]
+![psd_downsampled_frontal_lobe.png](attachments/psd_downsampled_frontal_lobe.png)
 
   
 
 ## Central
 
-![[psd_downsampled_central_lobe.png]]
+![psd_downsampled_central_lobe.png](attachments/psd_downsampled_central_lobe.png)
 
   
 
 ## Temporal
 
-![[psd_downsampled_temporal_lobe.png]]
+![psd_downsampled_temporal_lobe.png](attachments/psd_downsampled_temporal_lobe.png)
 
   
 
 ## Parietal
-![[psd_downsampled_parietal_lobe.png]]
+![psd_downsampled_parietal_lobe.png](attachments/psd_downsampled_parietal_lobe.png)
 ## Occipital
-![[psd_downsampled_occipital_lobe.png]]
+![psd_downsampled_occipital_lobe.png](attachments/psd_downsampled_occipital_lobe.png)
 
 # Inaccuracies noted
 
@@ -315,42 +316,42 @@ Due to the same settings being used in Welch function, but change in sampling ra
 By proportionally decreasing the nperseg to 128 (earlier 256), we get the following diagrams:
 
 ## Frontal Polar
-![[psd_downsampled_tweakedfrontal_polar_lobe.png]]
+![psd_downsampled_tweakedfrontal_polar_lobe.png](attachments/psd_downsampled_tweakedfrontal_polar_lobe.png)
 
   
 
 ## Frontal
-![[psd_downsampled_tweakedfrontal_lobe.png]]
+![psd_downsampled_tweakedfrontal_lobe.png](attachments/psd_downsampled_tweakedfrontal_lobe.png)
 
   
 
 ## Central
-![[psd_downsampled_tweakedcentral_lobe.png]]
+![psd_downsampled_tweakedcentral_lobe.png](attachments/psd_downsampled_tweakedcentral_lobe.png)
 
   
 
 ## Temporal
-![[psd_downsampled_tweakedtemporal_lobe.png]]
+![psd_downsampled_tweakedtemporal_lobe.png](attachments/psd_downsampled_tweakedtemporal_lobe.png)
 
   
 
 ## Parietal
-![[psd_downsampled_tweakedparietal_lobe.png]]
+![psd_downsampled_tweakedparietal_lobe.png](attachments/psd_downsampled_tweakedparietal_lobe.png)
 
 ## Occipital
-![[psd_downsampled_tweakedoccipital_lobe.png]]
+![psd_downsampled_tweakedoccipital_lobe.png](attachments/psd_downsampled_tweakedoccipital_lobe.png)
 
 
 # Mean Voltages of Downsampled Data
 
 `scipi.signal.resample` uses a FFT based approach to convert to frequency domain, add or remove zeroes in the middle according to up or downsampling, then transforms back to time domain.
 
-![[line_mean_voltages.png]]
+![line_mean_voltages.png](attachments/line_mean_voltages.png)
 
-![[line_mean_voltages_downsampled.png]]
+![line_mean_voltages_downsampled.png](attachments/line_mean_voltages_downsampled.png)
 
-![[line_mean_voltages_raw_downsampled.png]]
+![line_mean_voltages_raw_downsampled.png](attachments/line_mean_voltages_raw_downsampled.png)
 
-![[line_mean_voltages_raw_downsampled_10.png]]
+![line_mean_voltages_raw_downsampled_10.png](attachments/line_mean_voltages_raw_downsampled_10.png)
 
-![[line_mean_voltages_all.png]]
+![line_mean_voltages_all.png](attachments/line_mean_voltages_all.png)
